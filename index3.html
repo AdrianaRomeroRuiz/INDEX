@@ -1,0 +1,59 @@
+<! DOCTYPE HTML>
+<HTML lang=“es”>
+<HEAD> 
+<TITLE> TERCERA PÁGINA </TITLE>
+    </HEAD>
+    
+    <BODY>
+<video src="imagenes/video_1.mp4" id=aa width="60%" autoplay="true" controls></video>
+        <br>
+        <br>
+        <BUTTON onclick="velocidad(0)" type="button">pausa</BUTTON>
+        <BUTTON onclick="velocidad(1)" type="button">play</BUTTON>
+        <BUTTON onclick="velocidad(0.5)" type="button">x 1/2</BUTTON>
+        <BUTTON onclick="velocidad(2)" type="button">x 2</BUTTON>
+        <BUTTON onclick="velocidad(4)" type="button">x 4</BUTTON>
+        
+        <BUTTON onclick="sonido" type="button">sonido_off</BUTTON>
+        <BUTTON onclick="sonido" type="button">sonido_on</BUTTON>
+        
+        <BUTTON onclick="pantalla()" type="button">pantalla completa</BUTTON>
+        <br>
+        <form action="" name="form_vel" ONSUBMIT="leer_vel()"; return false></form>
+        <input TYPE="TEXT" SIZE="4" VALUE="1" NAME="numero">
+        <INPUT TYPE="submit" VALUE="velocidad">
+        
+        
+      <script>
+          
+        var video=document.getElementById("aa")
+        
+        function pantalla() 
+           {
+             video.requestFullscreen();
+               }
+     
+        function sonido_off() 
+           {
+             video.muted=true;
+               }  
+    
+        function sonido_on() 
+           {
+             video.muted=false;
+               }  
+          
+       function leer_vel() 
+           {
+               var aa=form_vel.numberValue
+               }
+        
+        function velocidad (v)
+            {
+                video.playbackRate=v;
+            }
+        
+        
+        </script>
+    <BODY>
+<HTML>
